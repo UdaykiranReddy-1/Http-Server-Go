@@ -1,4 +1,4 @@
-# Go HTTP Server Project
+# HTTP Server Using Go
 
 This project demonstrates building a simple HTTP server in Go by gradually adding features in stages. Each stage introduces new functionalities, starting from binding to a port to supporting concurrent connections, reading request headers and bodies, serving files, and handling HTTP compression.
 
@@ -16,11 +16,10 @@ The full code for each stage is available in the `server.go` file, with comments
   - [Stage 7: Return a File](#stage-7-return-a-file)
   - [Stage 8: Read Request Body](#stage-8-read-request-body)
   - [HTTP Compression](#http-compression)
-    - 1.[Compression Headers](#compression-headers)
-    - 2.[Multiple Compression Schemes](#multiple-compression-schemes)
-    - 3.[Gzip Compression](#gzip-compression)
+    - [Compression Headers](#compression-headers)
+    - [Multiple Compression Schemes](#multiple-compression-schemes)
+    - [Gzip Compression](#gzip-compression)
 - [Usage](#usage)
-- [License](#license)
 
 ## Stages
 
@@ -58,22 +57,22 @@ The server can now read the body of incoming requests. This is essential for han
 
 ### HTTP Compression
 
-#### 1:Compression Headers
+#### Compression Headers
 
 The server is updated to handle HTTP compression headers, allowing it to respond with compressed content if the client supports it.
 
-#### 2:Multiple Compression Schemes
+#### Multiple Compression Schemes
 
 Support for multiple compression schemes is added, enabling the server to choose the best compression method based on client capabilities.
 
-#### : 3:Gzip Compression
+#### Gzip Compression
 
 In this stage, the server is updated to support gzip compression for the responses. When a client sends a request with the `Accept-Encoding: gzip` header, the server compresses the response body using gzip before sending it back to the client. This reduces the size of the response and improves the performance for clients that support gzip compression.
 
 ## Usage
 
 1. Clone the repository.
-2. Navigate to the project directory.
+2. Navigate to the project directory and then to app folder inside project.
 3. Run the server using the command:
 
    ```sh
